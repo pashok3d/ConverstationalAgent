@@ -76,3 +76,7 @@ Connection to a support agent can be triggered by user in a few ways:
 3. When an exception is raised, the agent automatically redirects to a support agent.
 
 Note, that Human class is mocked as it is beyond project scope.
+
+## TODO
+- [ ] Complete unit tests and integrational tests.
+- [ ] Add GUI (e.g. [StreamLit](https://github.com/hwchase17/langchain-streamlit-template), [ChainLit](https://github.com/Chainlit/cookbook))
