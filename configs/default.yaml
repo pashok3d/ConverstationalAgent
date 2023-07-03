@@ -7,11 +7,11 @@ max_react_iterations: 5
 k_memory_interactions: 5
 knowledge_base_tool_notation:
   "name": "Knowledge Base"
-  "description": "use when need to answer questions about follwoing topics: PacificTech Robotics, Innovative IT company, Aquatic robots."
+  "description": "use when need to answer questions about following topics: PacificTech Robotics, Innovative IT company, Aquatic robots."
 search_tool_notation:
   "name": "Search"
   "description": "use when you need to answer questions about current events or the current state of the world."
 redirect_tool_notation:
   "name": "Redirect to human"
-  "description": "use if you want to redirect/connect/transfer to human agent/assistant/consultant or if you can't answer the question"
+  "description": "use if you want to redirect/connect/transfer to human agent/assistant/consultant or if you can't answer the question."
 redirect_to_human_msg: "{Redirect to human agent}"
