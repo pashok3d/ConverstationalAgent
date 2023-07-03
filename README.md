@@ -1,5 +1,5 @@
 # Conversational Agent
-Conversational Agent is implemented using LangChain. LangChain is a framework for building applications powered by large language models (LLMs).
+Conversational Agent is implemented using [LangChain](https://github.com/hwchase17/langchain). LangChain is a framework for building applications powered by large language models (LLMs).
 
 ## Installation
 Install required packages:
