@@ -50,7 +50,7 @@ Example conversation:
 The agent can retrieve information from the knowledge base to answer questions.
 For the knowledge base, Pinecone vector database is used. Langchain supports Pinecone integration out of the box. Using vector database allows to embed, store and retrieve additional knowledge efficiently.
 
-For the purpose of this project, knowledge base source is represented as a txt file about fictional company PacificTech Robotics whick develops robots for aquatic environments. 
+For the purpose of this project, knowledge base source is represented as a file `data/knowledge.txt` about fictional company PacificTech Robotics whick develops robots for aquatic environments. 
 The file was generated using ChatGPT.
 
 ### Web Search
