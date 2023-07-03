@@ -28,20 +28,33 @@ cli.py --config configs/default.yaml
 ```
 Example conversation:
 ```
->>> Hi! My name is Bob. How are you?
-<<< Hello Bob! I'm an AI assistant trained to help with a wide range of tasks. How can I assist you today?
->>> Tell me a joke
-<<< Sure, here's a joke for you: Why don't scientists trust atoms? Because they make up everything!
->>> What do know about PacificTech Robotics?
-<<< PacificTech Robotics is a company that focuses on research and development in the field of robotics. They explore emerging ... (Information from Knowledge Base)
->>> What type of robots?
-<<< At AquaTech Robotics, they specialize in the development and deployment of aquatic robots. Their team is dedicated ... (Information from Knowledge Base)
->>> Where is the location of their headquater?
-<<< PacificTech Robotics is headquartered on an island called Raraka in the heart of the Pacific Ocean. (Information from Knowledge Base)
->>> How far is it from Warsaw, Poland?
-<<< The distance from Warsaw, Poland varies depending on the mode of transportation. By air, the distance is approximately 1,000 miles. (Searches Web)
->>> Okey, thank you, now please connect me with a real agent
-<<< Redirecting to human assistant... (Knows when to redirect to Human)
+Human: Hi! My name is Bob. How are you?
+
+Agent: Hello Bob! I'm an AI assistant trained to help with a wide range of tasks. How can I assist you today?
+
+Human: Tell me a joke
+
+Agent: Sure, here's a joke for you: Why don't scientists trust atoms? Because they make up everything!
+
+Human: What do know about PacificTech Robotics?
+
+Agent: PacificTech Robotics is a company that focuses on research and development in the field of robotics. They explore emerging ... (Information from Knowledge Base)
+
+Human: What type of robots?
+
+Agent: At AquaTech Robotics, they specialize in the development and deployment of aquatic robots. Their team is dedicated ... (Information from Knowledge Base)
+
+Human: Where is the location of their headquater?
+
+Agent: PacificTech Robotics is headquartered on an island called Raraka in the heart of the Pacific Ocean. (Information from Knowledge Base)
+
+Human: How far is it from Warsaw, Poland?
+
+Agent: The distance from Warsaw, Poland varies depending on the mode of transportation. By air, the distance is approximately 1,000 miles. (Searches Web)
+
+Human: Okey, thank you, now please connect me with a real agent
+
+Agent: Redirecting to human assistant... (Knows when to redirect to Human)
 ```
 
 ## More details
