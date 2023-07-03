@@ -1,10 +1,51 @@
+# Conversational Agent
 Conversational Agent is implemented using LangChain. LangChain is a framework for building applications powered by large language models (LLMs).
 
+## Installation
+Install required packages:
+```
+pip install -r requirements.txt
+```
+Create `.env` file from `example.env` and set environment variables:
+```
+OPENAI_API_KEY=
+SERPAPI_API_KEY=
+PINECONE_API_KEY=
+PINECONE_ENV=
+PINECONE_INDEX=
+```
+
+## Quick start
+```
+cli.py --config configs/default.yaml
+```
+Example conversation:
+```
+>>> Hi! My name is Bob. How are you?
+<<< Hello Bob! I'm an AI assistant trained to help with a wide range of tasks. How can I assist you today?
+>>> Tell me a joke
+<<< Sure, here's a joke for you: Why don't scientists trust atoms? Because they make up everything!
+>>> What do know about PacificTech Robotics?
+<<< PacificTech Robotics is a company that focuses on research and development in the field of robotics. They explore emerging ... (Information from Knowledge Base)
+>>> What type of robots?
+<<< At AquaTech Robotics, they specialize in the development and deployment of aquatic robots. Their team is dedicated ... (Information from Knowledge Base)
+>>> Where is the location of their headquater?
+<<< PacificTech Robotics is headquartered on an island called Raraka in the heart of the Pacific Ocean. (Information from Knowledge Base)
+>>> How far is it from Warsaw, Poland?
+<<< The distance from Warsaw, Poland varies depending on the mode of transportation. By air, the distance is approximately 1,000 miles. (Searches Web)
+>>> Okey, thank you, now please connect me with a real agent
+<<< Redirecting to human assistant... (Knows when to redirect to Human)
+```
+
+## More details
+
+### Knowledge Base
+The agent can retrieve information from the knowledge base to answer questions.
 For the knowledge base, Pinecone vector database is used. Langchain supports Pinecone integration out of the box. Using vector database allows to embed, store and retrieve additional knowledge efficiently.
 
-
+### Web Search
+The agent can search web to answer questions.
 Google search is implemented using SerpAPI, which is also integrated into Langchain.
-
 
 The hardest part is using both knowledge base and Google search in Conversational Agent.
 We use ReAct approach in which the Agent is provided with a set of tools that can be used to accomplish user request. The problem is that when user asks non-general queries, the agent do not know which tool to use: knowledge base(s) or Google search.
@@ -17,8 +58,11 @@ to select a correct tool (in this cases knowledge base or Google search), each k
 
 For this project, the first approach is used, as it requires less modifications of avaliable Langchain components.
 
+### Redirection to Human
 
 Connection to a support agent can be triggered by user in two ways:
 1. By writing "\h"
 2. By writing a query that contains information about user's intent to connect to a support agent. For example, "I need to talk to a human" or "I need to talk to a support agent".
 3. When an exception is raised, the agent asks user if he wants to connect to a support agent.
+
+Note, that Human class is mocked as it is beyond project scope.
