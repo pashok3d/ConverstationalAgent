@@ -67,7 +67,7 @@ For this project, the first approach is used, as it requires less modifications 
 
 ### Redirection to Human
 
-Connection to a support agent can be triggered by user in two ways:
+Connection to a support agent can be triggered by user in a few ways:
 1. By writing "\h"
 2. By writing a query that contains information about user's intent to connect to a support agent. For example, "I need to talk to a human" or "I need to talk to a support agent".
 3. When an exception is raised, the agent asks user if he wants to connect to a support agent.
