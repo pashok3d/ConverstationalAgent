@@ -228,6 +228,7 @@ class AIAgent:
             memory_key="chat_history",
             k=config.k_memory_interactions,
             return_messages=True,
+            output_key="output",
         )
 
         # Initialize knowledge base tool
@@ -263,10 +264,22 @@ class AIAgent:
             memory=memory,
             verbose=False,
             handle_parsing_errors=True,
+            return_intermediate_steps=True,
         )
 
+        self.intermediate_steps = []
+
+    def reset(self):
+        """
+        Resets the agent's memory and intermediate steps.
+        """
+        self.conversational_agent.memory.clear()
+        self.intermediate_steps = []
+
     def __call__(self, query: str) -> str:
-        return self.conversational_agent(query)["output"]
+        result = self.conversational_agent(query)
+        self.intermediate_steps.extend(result["intermediate_steps"])
+        return result["output"]
 
 
 def redirect_to_human_assistant(agent: Union[HumanAgent, AIAgent]) -> "HumanAgent":
