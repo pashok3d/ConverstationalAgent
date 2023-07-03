@@ -24,7 +24,7 @@ OpenAI API is required to query LLM.
 Run cli app to start conversation.
 > Note: at the run, it may take some time to initialize vectorstore index.
 ```
-cli.py --config configs/default.yaml
+python cli.py --config configs/default.yaml
 ```
 Example conversation:
 ```
