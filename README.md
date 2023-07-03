@@ -14,6 +14,11 @@ PINECONE_API_KEY=
 PINECONE_ENV=
 PINECONE_INDEX=
 ```
+OpenAI API is required to query LLM.
+
+[Serp API](https://serpapi.com/) is used for Google search.
+
+[Pinecone API](https://app.pinecone.io) is used for vector database and knowledge retrieval.
 
 ## Quick start
 Run cli app to start conversation.
