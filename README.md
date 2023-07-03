@@ -92,4 +92,5 @@ Note, that Human class is mocked as it is beyond project scope.
 
 ## TODO
 - [ ] Complete unit tests and integrational tests.
+- [ ] Reorganize `cli.py` script. There are too many functions and classes in one file which reduces readability.
 - [ ] Add GUI (e.g. [StreamLit](https://github.com/hwchase17/langchain-streamlit-template), [ChainLit](https://github.com/Chainlit/cookbook))
