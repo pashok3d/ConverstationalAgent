@@ -1,4 +1,4 @@
-knowledge_base_file_path: tests/test_knowledge.txt
+knowledge_base_file_path: tests/data/test_knowledge.txt
 openai_model_name: gpt-3.5-turbo
 temperature: 0.0
 vector_store_dim: 1536

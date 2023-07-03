@@ -12,7 +12,7 @@ class MockAgent:
 
 
 def test_redirect_to_human_assistant_returns_human_agent():
-    config = AIAgentConfig.from_yaml("tests/test_config.yaml")
+    config = AIAgentConfig.from_yaml("tests/configs/test_config.yaml")
     agent = AIAgent(config)
     human_agent = redirect_to_human_assistant(agent)
     assert isinstance(human_agent, HumanAgent)
